@@ -25,7 +25,16 @@ class FollowersCard extends React.Component {
     return (
       <div>
         {this.state.followers.map(follower => {
-          return <h6 key={follower.id}>User Name: {follower.login}</h6>;
+          return (
+            <div className="followers" key={follower.id}>
+              <img
+                src={follower.avatar_url}
+                alt={`This is ${follower.login}`}
+              />
+              <h4>{follower.login}</h4>
+              <a href={follower.html_url}>{follower.html_url}</a>
+            </div>
+          );
         })}
       </div>
     );
