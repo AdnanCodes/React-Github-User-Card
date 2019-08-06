@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import axios from "axios";
 import Card from "./components/Card";
+import FollowersCard from "./components/FollowersCard";
 
 class App extends React.Component {
   constructor() {
@@ -28,6 +29,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Card user={this.state.users} />
+        <FollowersCard />
       </div>
     );
   }
